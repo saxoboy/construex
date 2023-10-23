@@ -2,7 +2,6 @@ import { NextResponse, NextRequest } from "next/server";
 
 import prismadb from "@/lib/prismadb";
 import { getCurrentUser } from "@/actions/getCurrentUser";
-import e from "express";
 
 export async function GET(
   req: NextRequest,
