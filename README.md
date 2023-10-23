@@ -1,3 +1,4 @@
+![Task Management App](https://construex-saxoboy.vercel.app/img/image1.png)
 
 # Task Management App
 
@@ -37,4 +38,7 @@ Once the application is running, you can access it in your web browser. You can 
 - MongoDB Atlas for the database
 
 Feel free to explore and use Task Management App to boost your productivity and task organization!
+
+![Task Management App](https://construex-saxoboy.vercel.app/img/image2.png)
+![Task Management App](https://construex-saxoboy.vercel.app/img/image3.png)
 
