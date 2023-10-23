@@ -26,8 +26,6 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    console.log(user);
-
     if (!user) {
       return NextResponse.json({
         status: 401,
@@ -55,24 +53,6 @@ export async function POST(req: NextRequest) {
     const token = jwt.sign({ _id: user.id }, process.env.TOKEN_SECRET!, {
       expiresIn: process.env.TOKEN_EXPIRES_IN,
     });
-
-    // // Verifica el token (opcional)
-    // jwt.verify(token, process.env.TOKEN_SECRET!, (err, decoded) => {
-    //   if (err) {
-    //     // El token no es válido
-    //     console.error("Token no válido:", err);
-    //   } else {
-    //     // El token es válido
-    //     console.log("Token válido. Datos del usuario:", decoded);
-    //   }
-    // });
-
-    // res.cookies.set("auth_cookie", token, {
-    //   secure: process.env.NODE_ENV === "production",
-    //   sameSite: "strict",
-    //   maxAge: process.env.TOKEN_EXPIRES_IN as unknown as number,
-    //   path: "/",
-    // });
 
     cookies().set({
       name: "auth_cookie",

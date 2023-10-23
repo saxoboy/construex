@@ -103,7 +103,6 @@ const SingUpFrom = () => {
           callbackUrl: "/",
         }).then((callback) => {
           if (callback?.ok) {
-            console.log(callback);
             toast({
               variant: "success",
               title: "Success",
@@ -111,7 +110,6 @@ const SingUpFrom = () => {
             });
           }
           if (callback?.error) {
-            console.log(callback);
             toast({
               variant: "destructive",
               title: "Error",
